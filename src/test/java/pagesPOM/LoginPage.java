@@ -22,7 +22,7 @@ public class LoginPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    //methods i.e. actions on the page
+    //methods
     public ProductPage login(String username, String password){
         userNameInput.click();
         userNameInput.clear();

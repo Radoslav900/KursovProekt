@@ -1,8 +1,6 @@
 package base;
 
-import com.google.j2objc.annotations.Property;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.bouncycastle.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -58,6 +56,8 @@ public class TestUtil extends DataProviders{
                 break;
             default:
                 driver = setupChromeDriver();
+
+                driver = setupFireFoxDriver();
         }
     }
 
@@ -73,6 +73,6 @@ public class TestUtil extends DataProviders{
 
     private WebDriver setupFireFoxDriver(){
         WebDriverManager.firefoxdriver().setup();
-        return new FirefoxDriver();
+        return driver = new FirefoxDriver();
     }
 }
